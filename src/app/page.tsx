@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Greet } from "./components/greet";
+import { Counter } from "./components/counter";
 
 export default function Home() {
   return (
@@ -50,6 +52,8 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <Greet />
+        <Counter/>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
