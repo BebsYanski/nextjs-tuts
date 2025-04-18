@@ -27,7 +27,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="bg-slate-900 text-white p-4 text-center">
+          Welcome to Bebongnchu Groups Companies
+        </header>
         {children}
+        <footer className="bg-slate-900 text-white p-4 text-center">
+          <small>Bebongnchu Company Groups</small>
+        </footer>
       </body>
     </html>
   );
