@@ -8,15 +8,9 @@ const LoginForm = () => {
 
   return (
     <form action={loginAction} className="flex max-w-[300px] flex-col gap-2">
-      <div className="flex flex-col gap-2">
-        <input
-          className="border-amber-300 outline-amber-100 border outline px-2 py-1"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Name"
-        />
-      </div>{" "}
+      {state?.errors?.email && (
+        <p className="text-red-500 text-sm">{state.errors.email}</p>
+      )}
       <div className="flex flex-col gap-2">
         <input
           className="border-amber-300 outline-amber-100 border outline px-2 py-1"
@@ -25,7 +19,10 @@ const LoginForm = () => {
           name="email"
           placeholder="Email"
         />
-      </div>{" "}
+      </div>
+      {state?.errors?.password && (
+        <p className="text-red-500 text-sm">{state.errors.password}</p>
+      )}
       <div className="flex flex-col gap-2">
         <input
           className="border-amber-300 outline-amber-100 border outline px-2 py-1"
